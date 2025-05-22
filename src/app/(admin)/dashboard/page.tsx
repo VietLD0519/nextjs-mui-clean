@@ -50,7 +50,7 @@ export default function DashboardPage() {
   return (
     <Grid container spacing={3}>
       {/* Thống kê tổng quan */}
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid size={{ xs: 12, sm: 6, md: 3 }}>
         <StatsCard
           title="Tổng người dùng"
           value={stats?.totalUsers || 0}
@@ -58,7 +58,7 @@ export default function DashboardPage() {
           color="primary"
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid size={{ xs: 12, sm: 6, md: 3 }}>
         <StatsCard
           title="Tổng sản phẩm"
           value={stats?.totalProducts || 0}
@@ -66,7 +66,7 @@ export default function DashboardPage() {
           color="success"
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid size={{ xs: 12, sm: 6, md: 3 }}>
         <StatsCard
           title="Tổng đơn hàng"
           value={stats?.totalOrders || 0}
@@ -74,7 +74,7 @@ export default function DashboardPage() {
           color="warning"
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid size={{ xs: 12, sm: 6, md: 3 }}>
         <StatsCard
           title="Doanh thu"
           value={
@@ -89,12 +89,12 @@ export default function DashboardPage() {
       </Grid>
 
       {/* Biểu đồ doanh số */}
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <SalesChart data={salesData} />
       </Grid>
 
       {/* Bảng top sản phẩm */}
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TopProductsTable products={topProducts} />
       </Grid>
     </Grid>
